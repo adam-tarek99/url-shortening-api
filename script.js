@@ -32,7 +32,6 @@ const shortApi = async (url) => {
     });
 
     const shortLink = await response.json();
-    console.log(shortLink.result_url);
     shortenLinks.textContent = shortLink.result_url;
     oLink.textContent = url;
     navigator.clipboard.writeText(shortLink.result_url);
